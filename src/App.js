@@ -20,7 +20,8 @@ export default function Board() {
 
   return (
     <>
-      <div className="board-row"><Square value={squares[0]} onSquareClick={handleClick(0)} />
+      <div className="board-row">
+        {/* // it is calling at the time of rendering causing infinite loops, we should call only when user clicks */}
         <Square value={squares[0]} onSquareClick={handleClick} />
         <Square value={squares[1]} onSquareClick={handleClick} />
         <Square value={squares[2]} onSquareClick={handleClick} />
