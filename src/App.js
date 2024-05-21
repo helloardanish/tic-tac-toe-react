@@ -1,25 +1,35 @@
 function Square({ value }) {
-  return <button className="square">{value}</button>;
-}
+  function handleClick() {
+    console.log('clicked!');
+  }
 
+  return (
+    <button
+      className="square"
+      onClick={handleClick}
+    >
+      {value}
+    </button>
+  );
+}
 
 export default function Board() {
   return (
     <>
       <div className="board-row">
-        <Square value="1" />
-        <Square value="2" />
-        <Square value="3" />
+        <Square value="x" />
+        <Square value="x" />
+        <Square value="x" />
       </div>
       <div className="board-row">
-        <Square value="4" />
-        <Square value="5" />
-        <Square value="6" />
+        <Square value="x" />
+        <Square value="x" />
+        <Square value="x" />
       </div>
       <div className="board-row">
-        <Square value="7" />
-        <Square value="8" />
-        <Square value="9" />
+        <Square value="x" />
+        <Square value="x" />
+        <Square value="x" />
       </div>
     </>
   );
